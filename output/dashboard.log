@@ -1,0 +1,5 @@
+/bin/sh: 1: /home/pi/epaper-dash/epaper/bin/python3: not found
+Creating dashboard...
+Preview saved to dashboard_preview.png
+Display error: 'GPIO busy'
+Done!

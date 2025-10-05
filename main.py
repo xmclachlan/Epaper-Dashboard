@@ -201,8 +201,6 @@ def update_display(image):
         epd.Clear()
         epd.display(epd.getbuffer(image))
         epd.sleep()
-        
-        print("Display updated (e-paper code commented out)")
     except Exception as e:
         print(f"Display error: {e}")
 
@@ -214,7 +212,7 @@ def main():
     image = create_dashboard()
     
     # Save preview
-    image.save('dashboard_preview.png')
+    image.save('/home/pi/epaper-dash/dashboard_preview.png')
     print("Preview saved to dashboard_preview.png")
     
     # Update display
