@@ -1,0 +1,44 @@
+Creating dashboard...
+Traceback (most recent call last):
+  File "/home/pi/epaper-dash/main.py", line 308, in <module>
+    main()
+    ~~~~^^
+  File "/home/pi/epaper-dash/main.py", line 299, in main
+    image.save('dashboard_preview.png')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 2591, in save
+    fp = builtins.open(filename, "w+b")
+PermissionError: [Errno 13] Permission denied: 'dashboard_preview.png'
+Creating dashboard...
+Traceback (most recent call last):
+  File "/home/pi/epaper-dash/main.py", line 546, in <module>
+    main()
+    ~~~~^^
+  File "/home/pi/epaper-dash/main.py", line 537, in main
+    image.save('dashboard_preview.png')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 2591, in save
+    fp = builtins.open(filename, "w+b")
+PermissionError: [Errno 13] Permission denied: 'dashboard_preview.png'
+Creating dashboard...
+Traceback (most recent call last):
+  File "/home/pi/epaper-dash/main.py", line 203, in <module>
+    main()
+    ~~~~^^
+  File "/home/pi/epaper-dash/main.py", line 196, in main
+    img_b.save('dashboard_black.png')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 2591, in save
+    fp = builtins.open(filename, "w+b")
+PermissionError: [Errno 13] Permission denied: 'dashboard_black.png'
+Creating dashboard...
+Traceback (most recent call last):
+  File "/home/pi/epaper-dash/main.py", line 226, in <module>
+    main()
+    ~~~~^^
+  File "/home/pi/epaper-dash/main.py", line 217, in main
+    image.save('dashboard_preview.png')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 2591, in save
+    fp = builtins.open(filename, "w+b")
+PermissionError: [Errno 13] Permission denied: 'dashboard_preview.png'
