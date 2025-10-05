@@ -8,6 +8,13 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 import random
+import os
+import sys
+
+# Add lib directory to path (it's in the same directory as this script)
+libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib')
+if os.path.exists(libdir):
+    sys.path.append(libdir)
 
 # Configuration
 DISPLAY_WIDTH = 800
@@ -188,12 +195,12 @@ def update_display(image):
     """Update the e-paper display"""
     try:
         # Uncomment and adjust for your specific display model
-        # from waveshare_epd import epd7in5_V2
-        # epd = epd7in5_V2.EPD()
-        # epd.init()
-        # epd.Clear()
-        # epd.display(epd.getbuffer(image))
-        # epd.sleep()
+        from waveshare_epd import epd7in5h
+        epd = epd7in5h.EPD()
+        epd.init()
+        epd.Clear()
+        epd.display(epd.getbuffer(image))
+        epd.sleep()
         
         print("Display updated (e-paper code commented out)")
     except Exception as e:
