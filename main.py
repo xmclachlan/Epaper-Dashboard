@@ -108,6 +108,88 @@ def wrap_text(text, font, max_width, draw):
     return lines
 
 def create_dashboard():
+    """Create a visually appealing color dashboard"""
+    image = Image.new('RGB', (DISPLAY_WIDTH, DISPLAY_HEIGHT), (255, 255, 255))
+    draw = ImageDraw.Draw(image)
+
+    # Colors
+    BLACK = (0, 0, 0)
+    RED = (255, 0, 0)
+    YELLOW = (255, 255, 0)
+    WHITE = (255, 255, 255)
+
+    # Fonts
+    try:
+        font_large = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 70)
+        font_medium = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 30)
+        font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 22)
+        font_tiny = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 16)
+    except:
+        font_large = ImageFont.load_default()
+        font_medium = font_small = font_tiny = ImageFont.load_default()
+
+    padding = 35
+    now = datetime.now()
+    weather = get_weather()
+    fact = get_random_fact()
+
+    # --- HEADER STRIP ---
+    draw.rectangle([(0, 0), (DISPLAY_WIDTH, 80)], fill=RED)
+    draw.text((padding, 20), now.strftime('%A, %B %d %Y').upper(), font=font_medium, fill=WHITE)
+
+    # --- TIME (centered) ---
+    time_text = now.strftime('%I:%M')
+    ampm = now.strftime('%p')
+    # Get text width and height (compatible with new Pillow)
+    bbox = draw.textbbox((0, 0), time_text, font=font_large)
+    time_w = bbox[2] - bbox[0]
+    time_h = bbox[3] - bbox[1]
+    draw.text(((DISPLAY_WIDTH - time_w) / 2, 120), time_text, font=font_large, fill=BLACK)
+    draw.text(((DISPLAY_WIDTH + time_w) / 2 + 15, 150), ampm, font=font_medium, fill=YELLOW)
+
+    # --- WEATHER SECTION (right side) ---
+    x = DISPLAY_WIDTH - 250
+    y = 100
+    draw.text((x, y), "WEATHER", font=font_medium, fill=RED)
+    y += 45
+    draw.text((x, y), f"{weather['temp']}°C", font=font_large, fill=BLACK)
+    y += 80
+    draw.text((x, y), weather['description'], font=font_small, fill=BLACK)
+
+    # Optional small weather icon
+    code = weather['description'].lower()
+    if "clear" in code:
+        icon = "☀"
+    elif "cloud" in code:
+        icon = "☁"
+    elif "rain" in code:
+        icon = "🌧"
+    elif "snow" in code:
+        icon = "❄"
+    elif "fog" in code:
+        icon = "🌫"
+    else:
+        icon = "⛅"
+    draw.text((x - 60, 100), icon, font=font_large, fill=YELLOW)
+
+    # --- RANDOM FACT SECTION ---
+    y = 300
+    draw.text((padding, y), "RANDOM FACT", font=font_medium, fill=RED)
+    y += 15
+    draw.line([(padding, y + 10), (DISPLAY_WIDTH - padding, y + 10)], fill=RED, width=2)
+    y += 30
+
+    fact_lines = wrap_text(fact, font_small, DISPLAY_WIDTH - 2 * padding, draw)
+    for line in fact_lines[:5]:
+        draw.text((padding, y), line, font=font_small, fill=BLACK)
+        y += 28
+
+    # --- FOOTER ---
+    footer_text = f"Updated {now.strftime('%I:%M %p')}"
+    draw.text((DISPLAY_WIDTH - 220, DISPLAY_HEIGHT - 40), footer_text, font=font_tiny, fill=YELLOW)
+
+    return image
+
     """Create the dashboard image"""
     # Create blank white image
     image = Image.new('1', (DISPLAY_WIDTH, DISPLAY_HEIGHT), 255)
