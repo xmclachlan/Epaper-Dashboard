@@ -237,7 +237,7 @@ def create_dashboard() -> Image.Image:
     y_pos_fact = 300
     
     # Header (Red)
-    draw.text((PADDING, y_pos_fact), "FACT OF THE DAY", font=fonts['l_bold'], fill=RGB_RED)
+    draw.text((PADDING, y_pos_fact), "RANDOM FACT", font=fonts['l_bold'], fill=RGB_RED)
     y_pos_fact += fonts['l_bold'].getbbox("FACT OF THE DAY")[3] + 10
     
     # Fact Content (Black)

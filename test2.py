@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 E-Paper Dashboard: Unified 4-Color UI (Black, White, Red, Yellow)
-Displays: Large Clock, Weather, Random Facts, and System Status.
+Displays: Large Clock, Weather (including High/Low), Random Facts, and System Status.
 Designed for 800x480 pixel 4-color displays (e.g., Waveshare epd2in15g).
 
 NOTE: This script assumes the epd2in15g.py driver file is present in the 'lib' directory
@@ -27,6 +27,7 @@ if os.path.exists(libdir):
 
 DISPLAY_WIDTH = 800
 DISPLAY_HEIGHT = 480
+MAX_FACT_LINES = 4 # Hard limit for the random fact footer content
 
 # Define RGB Colors for Drawing (must match colors supported by the driver's palette)
 RGB_WHITE = (255, 255, 255)
@@ -49,19 +50,29 @@ WEATHER_CODES: Dict[int, Tuple[str, str]] = {
 # --- Utility Functions: Data Fetching ---
 
 def get_weather() -> Dict[str, Any]:
-    """Fetch current weather from Open-Meteo."""
-    default_weather = {'temp': '--', 'condition': 'Cloud', 'description': 'Weather unavailable'}
+    """Fetch current weather and daily high/low from Open-Meteo."""
+    # Added defaults for max/min temperature
+    default_weather = {'temp': '--', 'condition': 'Cloud', 'description': 'Weather unavailable', 'temp_max': '--', 'temp_min': '--'} 
     try:
         url = "https://api.open-meteo.com/v1/forecast"
         params = {
             'latitude': LATITUDE, 'longitude': LONGITUDE, 
-            'current_weather': 'true', 'temperature_unit': 'celsius', 
+            'current_weather': 'true', 
+            'daily': ['temperature_2m_max', 'temperature_2m_min'], # Request daily forecast data
+            'temperature_unit': 'celsius', 
             'timezone': 'auto'
         }
         response = requests.get(url, params=params, timeout=8)
         response.raise_for_status()
         data = response.json()
         current = data.get('current_weather', {})
+        daily = data.get('daily', {}) # Get daily data
+
+        # Safely extract today's min/max (first element of the arrays)
+        # Round the temperature values
+        temp_max = round(daily.get('temperature_2m_max', [0])[0]) if daily.get('temperature_2m_max') else '--'
+        temp_min = round(daily.get('temperature_2m_min', [0])[0]) if daily.get('temperature_2m_min') else '--'
+        
         weather_code = current.get('weathercode', 2)
         
         icon_condition, description = WEATHER_CODES.get(weather_code, ('Cloud', 'Unknown condition'))
@@ -69,7 +80,9 @@ def get_weather() -> Dict[str, Any]:
         return {
             'temp': round(current.get('temperature', 0)),
             'condition': icon_condition,
-            'description': description
+            'description': description,
+            'temp_max': temp_max, # Include max temp
+            'temp_min': temp_min  # Include min temp
         }
     except requests.exceptions.RequestException as e:
         logging.error(f"Weather API error: {e}")
@@ -215,13 +228,35 @@ def create_dashboard() -> Image.Image:
     # Start y_pos higher since "Current Weather" title is removed
     y_pos_weather = TOP_BAR_HEIGHT + PADDING 
     
-    # Temperature (Yellow)
+    # Current Temperature (RED)
     temp_text = f"{weather['temp']}°C"
     draw.text((x_pos, y_pos_weather), temp_text, font=fonts['xl'], fill=RGB_RED)
     
-    # Weather Description (Black)
+    # High/Low Temperature (Red/Black)
     temp_text_height = fonts['xl'].getbbox(temp_text)[3]
-    y_pos_weather += temp_text_height + 5 # Move Y past the temperature
+    # ADJUSTMENT: Use the full height of the XL font + an additional 10px buffer to push High/Low lower.
+    y_pos_weather += temp_text_height + 10
+    
+    # Separate High (Red) and Low (Black) for 4-color aesthetic
+    h_text = f"H: {weather['temp_max']}°C"
+    l_text = f"L: {weather['temp_min']}°C"
+    
+    # Use medium font (fonts['m'], size 24) for better fit in the sidebar
+    temp_font = fonts['m'] 
+    
+    # Draw High (Red)
+    draw.text((x_pos, y_pos_weather), h_text, font=temp_font, fill=RGB_RED)
+    
+    # Calculate width of H text to position L text next to it
+    h_w = draw.textbbox((0, 0), h_text, font=temp_font)[2] - draw.textbbox((0, 0), h_text, font=temp_font)[0]
+    
+    # Draw Low (Black) with reduced spacing (10)
+    draw.text((x_pos + h_w + 10, y_pos_weather), l_text, font=temp_font, fill=RGB_BLACK)
+
+    # Weather Description (Black)
+    high_low_height = temp_font.getbbox(h_text)[3]
+    y_pos_weather += high_low_height + 5 # Move Y past the high/low
+    
     draw.text((x_pos, y_pos_weather), weather['description'], font=fonts['m'], fill=RGB_BLACK)
     
     # Weather Icon (Red/Yellow/Black)
@@ -237,13 +272,13 @@ def create_dashboard() -> Image.Image:
     y_pos_fact = 300
     
     # Header (Red)
-    draw.text((PADDING, y_pos_fact), "FACT OF THE DAY", font=fonts['l_bold'], fill=RGB_RED)
-    y_pos_fact += fonts['l_bold'].getbbox("FACT OF THE DAY")[3] + 10
+    draw.text((PADDING, y_pos_fact), "RANDOM FACT", font=fonts['l_bold'], fill=RGB_RED)
+    y_pos_fact += fonts['l_bold'].getbbox("RANDOM FACT")[3] + 10
     
-    # Fact Content (Black)
+    # Fact Content (Black) - MAX_FACT_LINES is used here for a strict limit
     fact_lines = wrap_text(fact, fonts['m'], DISPLAY_WIDTH - 2 * PADDING, draw)
     
-    for line in fact_lines[:4]: # Limit to 4 lines
+    for line in fact_lines[:MAX_FACT_LINES]: # Limit to 4 lines to ensure fit
         draw.text((PADDING, y_pos_fact), line, font=fonts['m'], fill=RGB_BLACK)
         y_pos_fact += fonts['m'].getbbox(line)[3] + 5
 
@@ -263,7 +298,7 @@ def update_display(image: Image.Image):
     The driver's getbuffer() handles the 4-color conversion.
     """
     try:
-        # Import the correct module name based on the driver file
+        # NOTE: Using epd7in5h as per the original import, assuming it handles 800x480 4-color.
         from waveshare_epd import epd7in5h as epd_module 
         logging.info("Updating e-paper display...")
         
@@ -281,7 +316,7 @@ def update_display(image: Image.Image):
         logging.info("Display updated and sleeping.")
         
     except ImportError:
-        logging.error("E-paper driver not found (epd2in15g). Ensure it is in the 'lib' directory.")
+        logging.error("E-paper driver not found (epd2in15g/epd7in5h). Ensure it is in the 'lib' directory.")
     except Exception as e:
         # Log the specific error for debugging
         logging.error(f"E-paper display error: {e}")
