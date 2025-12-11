@@ -1,0 +1,180 @@
+/* E-Paper Optimized CSS 
+   Resolution: 800 x 480 
+   Colors: Black, White, Red (if supported)
+*/
+
+body,
+html {
+    width: 800px;
+    height: 480px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    overflow: hidden;
+    /* Prevent scrolling */
+}
+
+.container {
+    height: 100vh;
+    /* Use viewport height */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    grid-template-rows: 60px auto;
+    /* Header, Main content */
+    width: 100%;
+}
+
+/* --- Header --- */
+.header {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #000;
+    padding: 0 15px;
+    background-color: #000;
+    color: #fff;
+    /* Inverted header */
+    height: 60px;
+    /* Fixed height */
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header .date {
+    font-size: 20px;
+}
+
+/* --- Columns --- */
+.col-left {
+    padding: 10px 15px;
+    border-right: 2px solid #000;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.col-right {
+    padding: 10px 15px;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+/* --- Modules --- */
+.module {
+    margin-bottom: 15px;
+}
+
+.module-title {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- Weather --- */
+.weather-summary {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.weather-details {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    /* Vertical stack for details */
+    margin-bottom: 5px;
+}
+
+.weather-graph-img {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+/* --- News --- */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.source-tag {
+    font-weight: bold;
+    font-size: 10px;
+    padding: 1px 4px;
+    color: #fff;
+    background-color: #000;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.source-abc {
+    background-color: #000;
+}
+
+.source-guardian {
+    background-color: #000;
+}
+
+.source-hn {
+    background-color: #000;
+}
+
+/* --- Transport --- */
+.transport-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.transport-table td {
+    padding: 3px 0;
+}
+
+.route-badge {
+    background-color: #000;
+    color: #fff;
+    padding: 2px 5px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.time-remaining {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* --- Calendar --- */
+.calendar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar-item {
+    font-size: 14px;
+    margin-bottom: 4px;
+    border-bottom: 1px dotted #aaa;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    /* Keep on one line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,9 @@
+requests
+feedparser
+jinja2
+html2image
+matplotlib
+icalendar
+pytz
+pillow
+waveshare-epd
