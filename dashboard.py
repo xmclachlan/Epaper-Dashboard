@@ -124,7 +124,7 @@ def generate_weather_graph(hourly_data):
     temps = [x['temp'] for x in hourly_data]
     rains = [x['rain'] for x in hourly_data]
 
-    # Optimized graph size for the new layout
+    # Optimized graph size
     fig, ax1 = plt.subplots(figsize=(5, 1.5), dpi=100)
     
     color = 'black'
@@ -137,7 +137,7 @@ def generate_weather_graph(hourly_data):
     
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
-    ax1.spines['left'].set_visible(False) # Cleaner look
+    ax1.spines['left'].set_visible(False)
     ax1.spines['bottom'].set_visible(False)
 
     if any(r > 0 for r in rains):
@@ -149,7 +149,7 @@ def generate_weather_graph(hourly_data):
         ax2.spines['right'].set_visible(False)
         ax2.spines['left'].set_visible(False)
         ax2.spines['bottom'].set_visible(False)
-        ax2.set_yticks([]) # Hide rain axis ticks to save space
+        ax2.set_yticks([]) 
 
     plt.tight_layout()
     
@@ -174,6 +174,10 @@ def get_transport(session):
         resp = session.get(url, headers=headers, timeout=15).json()
         events = resp.get('stopEvents', [])
         
+        # Local timezone for displaying departure time
+        tz_name = getattr(config, 'TIMEZONE', "Australia/Sydney")
+        local_tz = ZoneInfo(tz_name)
+        
         for event in events[:4]:
             time_str = event.get('departureTimeEstimated', event.get('departureTimePlanned'))
             if not time_str: continue
@@ -182,10 +186,16 @@ def get_transport(session):
                 time_str = time_str[:-1] + "+00:00"
             
             dep_dt = datetime.fromisoformat(time_str)
-            now = datetime.now(dep_dt.tzinfo)
+            # Convert to local time
+            dep_local = dep_dt.astimezone(local_tz)
             
-            diff = int((dep_dt - now).total_seconds() / 60)
-            if diff < 0: continue
+            # Format as HH:MM (e.g., 14:05)
+            due_str = dep_local.strftime("%H:%M")
+            
+            # Check if it's past
+            now = datetime.now(dep_dt.tzinfo)
+            if dep_dt < now:
+                continue 
             
             route = event['transportation']['number']
             dest = event['transportation']['destination']['name'].split(",")[0]
@@ -193,7 +203,7 @@ def get_transport(session):
             departures.append({
                 'route': route,
                 'destination': dest[:15],
-                'due': f"{diff}m" if diff > 0 else "Now"
+                'due': due_str
             })
     except Exception as e:
         logging.error(f"Transport error: {e}")
@@ -335,8 +345,21 @@ def main():
             )
             
             logging.info("Generating Image...")
-            hti = Html2Image(browser_executable=browser_path, custom_flags=['--no-sandbox', '--hide-scrollbars', '--force-device-scale-factor=1', '--window-size=800,480'])
-            hti.screenshot(html_str=html_out, css_file=CSS_FILE, save_as=OUTPUT_IMG, size=(800, 480))
+            
+            # --- FIX: Render Taller & Crop ---
+            # We render a slightly taller window (800x600) to ensure content doesn't get cut off
+            # by Chromium's internal scrollbars/viewport logic, then we crop to 800x480.
+            hti = Html2Image(browser_executable=browser_path, custom_flags=['--no-sandbox', '--hide-scrollbars', '--force-device-scale-factor=1', '--window-size=800,600'])
+            
+            # Generate temporary image
+            temp_img = "temp_dashboard.png"
+            hti.screenshot(html_str=html_out, css_file=CSS_FILE, save_as=temp_img, size=(800, 600))
+            
+            # Crop to exact E-Paper size using Pillow
+            with Image.open(temp_img) as img:
+                # Crop(left, top, right, bottom)
+                cropped_img = img.crop((0, 0, 800, 480))
+                cropped_img.save(OUTPUT_IMG)
             
             update_display()
             
