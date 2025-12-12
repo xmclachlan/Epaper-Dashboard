@@ -7,3 +7,4 @@ icalendar
 pytz
 pillow
 waveshare-epd
+python-dotenv

@@ -1,17 +1,29 @@
-# --- USER CONFIGURATION ---
+import os
+from dotenv import load_dotenv
 
-# 1. OpenWeatherMap API Key
-# Get one here: https://openweathermap.org/api
-OWM_API_KEY = "0a0b8ba70a446364835a207bfc36d12e"
-LAT = "-33.8688" # Sydney
-LON = "151.2093"
+# Load environment variables from .env file
+load_dotenv()
 
-# 2. TfNSW API Key
-# Get one here: https://opendata.transport.nsw.gov.au/
-TFNSW_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJxazJsV3JWNnJIZVlDYmNwU0JreDl3OENSWGoxVTk5dG9fMmhaMXBxV1JnIiwiaWF0IjoxNzY1NDI1MzA2fQ.U-b7-TSLBqiBKKmfcml50sGvkmRZm_bD2lMxQkyY0ZA"
-BUS_STOP_ID = "206663" # Example: Central Station
+# --- LOCATIONS ---
+LATITUDE = -33.8688  # Sydney
+LONGITUDE = 151.2093
+TIMEZONE = "Australia/Sydney"
 
-# 3. Calendar ICS URL
-# From Google Calendar Settings -> Secret Address in iCal format
-# Or iCloud -> Public Calendar -> Webcal URL (replace webcal:// with https://)
-CALENDAR_ICS_URL = "https://calendar.google.com/calendar/ical/xaviermclachlan1309%40gmail.com/private-92adfd03cd5921a765059954dfb747f7/basic.ics"
+# --- WEATHER (OpenWeatherMap) ---
+# Get API key: https://openweathermap.org/api
+OWM_API_KEY = os.getenv("OWM_API_KEY", "")
+
+# --- TRANSPORT (TfNSW) ---
+# Get API key: https://opendata.transport.nsw.gov.au/
+TFNSW_API_KEY = os.getenv("TFNSW_API_KEY", "")
+BUS_STOP_ID = "200060" # Example: Central Station
+
+# --- CALENDAR (ICS / iCAL) ---
+# Google: Settings -> Secret Address in iCal format
+# iCloud: Public Calendar -> Webcal URL (replace webcal:// with https://)
+# You can also put this in .env if you want to keep it private
+CALENDAR_URL = os.getenv("CALENDAR_URL", "") 
+
+# --- DISPLAY SETTINGS ---
+# Set to True if you want to rotate the display 180 degrees
+ROTATE_180 = False

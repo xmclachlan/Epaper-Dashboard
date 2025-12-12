@@ -1,0 +1,8 @@
+sshkey
+sshkey.pub
+credentials.json
+.env
+pycache/
+*.pyc
+venv/
+*.png
