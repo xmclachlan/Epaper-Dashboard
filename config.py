@@ -16,7 +16,7 @@ OWM_API_KEY = os.getenv("OWM_API_KEY", "")
 # --- TRANSPORT (TfNSW) ---
 # Get API key: https://opendata.transport.nsw.gov.au/
 TFNSW_API_KEY = os.getenv("TFNSW_API_KEY", "")
-BUS_STOP_ID = "206653" # Example: Central Station
+BUS_STOP_ID = "206663" # Example: Central Station
 
 # --- CALENDAR (ICS / iCAL) ---
 # Google: Settings -> Secret Address in iCal format
