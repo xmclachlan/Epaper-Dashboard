@@ -1,151 +1,141 @@
-/* E-Paper Optimized CSS 
-   Resolution: 800 x 480 
-   Colors: Black, White, Red (#FF0000), Yellow (#FFFF00)
-*/
+/* E-Paper 800x480 - Red/Yellow/Black/White */
 
 * {
     box-sizing: border-box;
 }
 
-body,
-html {
+body {
     width: 800px;
     height: 480px;
     margin: 0;
     padding: 0;
+    background-color: white;
+    color: black;
     font-family: 'Arial', sans-serif;
-    background-color: #FFFFFF;
-    color: #000000;
     overflow: hidden;
+    /* Critical */
 }
 
+/* Main Grid: Header + 2 Columns */
 .container {
+    width: 800px;
     height: 480px;
-    /* Explicit height */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px 410px;
-    width: 100%;
 }
 
-/* --- Header --- */
+/* Header */
 .header {
     grid-column: 1 / span 2;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid #000;
     padding: 0 20px;
-    background-color: #000;
-    color: #fff;
     height: 70px;
-    overflow: hidden;
 }
 
 .header h1 {
     font-size: 32px;
     margin: 0;
-    font-weight: bold;
     color: #FFFF00;
-    /* Yellow Title */
+    /* Yellow */
 }
 
 .header .datetime {
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .header .date {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #fff;
 }
 
 .header .time {
     font-size: 28px;
     color: #FFFFFF;
-    /* CHANGED TO WHITE */
     font-weight: bold;
-    line-height: 1;
 }
 
-/* --- Columns --- */
-.col-left {
-    padding: 15px 20px;
-    border-right: 3px solid #000;
-    height: 410px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+/* White Time */
 
+/* Columns */
+.col-left,
 .col-right {
-    padding: 15px 20px;
-    height: 410px;
+    padding: 15px;
+    padding-bottom: 50px;
+    /* INCREASED PADDING from 35px */
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-/* --- Modules --- */
-.module {
-    margin-bottom: 20px;
+.col-left {
+    border-right: 3px solid black;
 }
 
+/* Modules */
 .module-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    border-bottom: 3px solid #FF0000;
-    /* Red Underline */
     color: #FF0000;
-    /* Red Text */
+    /* Red Header */
+    border-bottom: 3px solid black;
     margin-bottom: 10px;
     text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
 }
 
-/* --- Weather --- */
+/* Weather Compact */
 .weather-main {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-.weather-summary {
-    font-size: 48px;
-    /* Huge Temp */
-    font-weight: bold;
-    color: #000;
-    line-height: 1;
-}
-
-.weather-uv {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.weather-details {
-    font-size: 18px;
-    line-height: 1.4;
     margin-bottom: 10px;
 }
 
-/* Forecast Row */
+.temp-big {
+    font-size: 56px;
+    font-weight: bold;
+    color: black;
+}
+
+.weather-desc {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF0000;
+    /* Red Condition */
+}
+
+.weather-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.stat-box {
+    background-color: #FFFF00;
+    /* Yellow Badge */
+    padding: 4px 8px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+/* 3hr Forecast Row */
 .forecast-row {
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid #000;
-    padding-top: 8px;
-    margin-top: 5px;
+    border-top: 1px solid black;
+    padding-top: 10px;
 }
 
 .forecast-item {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .f-time {
@@ -153,90 +143,79 @@ html {
 }
 
 .f-pop {
-    color: #000;
-    font-size: 14px;
+    color: blue;
 }
 
-/* --- News --- */
-.news-list {
+/* Calendar */
+.cal-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 40px;
+    /* Added extra bottom margin to push content up from bottom edge */
 }
 
-.news-list li {
-    margin-bottom: 12px;
-    font-size: 16px;
-    line-height: 1.3;
+.cal-item {
+    margin-bottom: 10px;
+    border-left: 4px solid #FF0000;
+    /* Red Line */
+    padding-left: 8px;
 }
 
-.source-tag {
+.cal-time {
+    font-size: 14px;
     font-weight: bold;
-    font-size: 12px;
-    padding: 2px 6px;
-    color: #000;
-    background-color: #FFFF00;
-    /* Yellow */
-    margin-right: 5px;
-    border-radius: 4px;
-    border: 1px solid #000;
+    color: #555;
 }
 
-/* --- Transport --- */
-.transport-table {
-    width: 100%;
-    border-collapse: collapse;
+.cal-sum {
     font-size: 18px;
-}
-
-.transport-table td {
-    padding: 6px 0;
-    border-bottom: 1px dotted #ccc;
-}
-
-.route-badge {
-    background-color: #000;
-    color: #fff;
-    padding: 2px 6px;
     font-weight: bold;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.time-remaining {
-    text-align: right;
-    font-weight: bold;
-    color: #FF0000;
-    /* Red */
-}
-
-/* --- Calendar --- */
-.calendar-list {
-    list-style: none;
-    padding: 0;
-}
-
-.calendar-item {
-    margin-bottom: 12px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #eee;
-}
-
-.calendar-time {
-    font-weight: bold;
-    font-size: 16px;
-    color: #000;
-    background-color: #FFFF00;
-    /* Yellow */
-    display: inline-block;
-    padding: 0 4px;
-    margin-bottom: 2px;
-}
-
-.calendar-summary {
-    font-size: 18px;
-    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: block;
+}
+
+/* Transport */
+.trans-table {
+    width: 100%;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+.trans-table td {
+    padding: 6px 0;
+    border-bottom: 1px dotted #888;
+}
+
+.trans-route {
+    background-color: black;
+    color: white;
+    padding: 2px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.trans-time {
+    font-weight: bold;
+    color: #FF0000;
+    text-align: right;
+}
+
+/* News */
+.news-item {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.news-source {
+    background-color: #FFFF00;
+    padding: 1px 4px;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid black;
+    margin-right: 5px;
+    vertical-align: middle;
 }

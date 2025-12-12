@@ -1397,3 +1397,829 @@ ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could
 2025-12-12 12:48:36,302 - INFO: Sending to Display...
 2025-12-12 12:48:59,499 - INFO: Sleeping Display...
 2025-12-12 12:49:01,600 - INFO: Update complete. Sleeping for 271s...
+2025-12-12 12:53:33,040 - INFO: Fetching Slow Data...
+2025-12-12 12:53:38,863 - INFO: Fetching Fast Data...
+2025-12-12 12:53:39,151 - INFO: Rendering HTML...
+2025-12-12 12:53:39,166 - INFO: Generating Image...
+[3980:4010:1212/125339.556228:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:4010:1212/125339.637422:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4026:4026:1212/125339.838805:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4026:4026:1212/125339.839557:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4026:4026:1212/125339.839849:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4026:4026:1212/125339.840134:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4026:4026:1212/125339.840389:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[3980:3980:1212/125339.873177:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:4010:1212/125339.875554:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:4010:1212/125339.875683:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:4010:1212/125339.875725:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:4010:1212/125339.875766:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:4010:1212/125339.875798:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:4010:1212/125339.875828:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125339.888628:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4026:4026:1212/125339.912068:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4026:4026:1212/125339.914371:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4026:4026:1212/125339.915009:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4026:4026:1212/125339.916078:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4026:4026:1212/125339.917820:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4026:4026:1212/125339.929814:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[3980:3980:1212/125339.949405:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:3980:1212/125339.949580:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:4010:1212/125339.949754:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125339.949828:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:3980:1212/125340.038581:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4105:4105:1212/125340.348740:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4105:4105:1212/125340.349049:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4105:4105:1212/125340.349328:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4105:4105:1212/125340.351663:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4105:4105:1212/125340.351882:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4105:4105:1212/125340.401329:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4105:4105:1212/125340.401569:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4105:4105:1212/125340.401761:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4105:4105:1212/125340.401838:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4105:4105:1212/125340.401916:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4105:4105:1212/125340.404875:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[3980:4010:1212/125340.717419:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125340.838241:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:4010:1212/125340.839573:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125340.861482:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:4010:1212/125340.864076:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125340.874463:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:4010:1212/125340.874995:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125340.893726:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[3980:4010:1212/125340.894199:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[3980:3980:1212/125340.895766:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+50267 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 12:53:42,049 - INFO: Processing Image...
+2025-12-12 12:53:42,050 - INFO: Sending to Display...
+2025-12-12 12:54:05,244 - INFO: Sleeping Display...
+2025-12-12 12:54:07,345 - INFO: Update complete. Sleeping for 266s...
+2025-12-12 12:58:33,040 - INFO: Fetching Fast Data...
+2025-12-12 12:58:33,402 - INFO: Rendering HTML...
+2025-12-12 12:58:33,438 - INFO: Generating Image...
+[4206:4236:1212/125833.896033:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4236:1212/125833.980037:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4251:4251:1212/125834.174550:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4251:4251:1212/125834.175307:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4251:4251:1212/125834.175587:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4251:4251:1212/125834.175842:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4251:4251:1212/125834.176046:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4206:4206:1212/125834.212782:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4236:1212/125834.213037:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4236:1212/125834.213106:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4236:1212/125834.213147:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4236:1212/125834.213184:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4236:1212/125834.213220:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4236:1212/125834.213338:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125834.225894:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4251:4251:1212/125834.255444:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4251:4251:1212/125834.260400:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4251:4251:1212/125834.260915:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4251:4251:1212/125834.261314:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4251:4251:1212/125834.261717:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4251:4251:1212/125834.267422:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[4206:4206:1212/125834.278368:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4206:1212/125834.278776:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4206:1212/125834.279276:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4236:1212/125834.282347:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125834.332796:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4320:4320:1212/125834.607561:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4320:4320:1212/125834.607894:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4320:4320:1212/125834.608086:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4320:4320:1212/125834.608182:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4320:4320:1212/125834.608330:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4320:4320:1212/125834.659677:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[4320:4320:1212/125834.660097:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[4320:4320:1212/125834.660383:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[4320:4320:1212/125834.660465:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[4320:4320:1212/125834.661388:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[4320:4320:1212/125834.664493:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[4206:4236:1212/125834.955432:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125835.078034:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4236:1212/125835.081384:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125835.103941:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4236:1212/125835.104213:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125835.111644:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4236:1212/125835.111941:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125835.132783:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[4206:4236:1212/125835.133099:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[4206:4206:1212/125835.135509:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+51973 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 12:58:36,288 - INFO: Processing Image...
+2025-12-12 12:58:36,289 - INFO: Sending to Display...
+2025-12-12 12:58:59,487 - INFO: Sleeping Display...
+2025-12-12 12:59:01,588 - INFO: Update complete. Sleeping for 271s...
+2025-12-12 13:00:42,177 - INFO: Starting Dashboard Automator...
+2025-12-12 13:00:42,182 - INFO: Fetching Slow Data...
+2025-12-12 13:00:42,189 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:00:44,191 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:00:48,193 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:00:56,194 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:01:02,914 - INFO: Fetching Fast Data...
+2025-12-12 13:01:03,238 - INFO: Rendering HTML...
+2025-12-12 13:01:03,258 - INFO: Generating Image...
+[1101:1133:1212/130106.197836:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1133:1212/130107.758088:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130122.001730:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1133:1212/130122.001974:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1133:1212/130122.002022:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1133:1212/130122.002056:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1133:1212/130122.002087:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1133:1212/130122.002118:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1133:1212/130122.002180:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130122.042157:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1101:1212/130122.185513:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1101:1212/130122.185637:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1101:1212/130122.185814:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1133:1212/130122.186530:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130122.286015:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1143:1143:1212/130122.653365:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1143:1143:1212/130122.653663:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1143:1143:1212/130122.653736:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1143:1143:1212/130122.653821:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1143:1143:1212/130122.653884:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1143:1143:1212/130122.716903:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1143:1143:1212/130122.718461:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1143:1143:1212/130122.718624:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1143:1143:1212/130122.718724:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1143:1143:1212/130122.718818:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1143:1143:1212/130122.725528:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1101:1133:1212/130124.342456:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130124.622479:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1133:1212/130124.622813:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130124.688003:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1133:1212/130124.688327:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130124.704653:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1133:1212/130124.708878:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130124.753023:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1101:1133:1212/130124.753686:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1101:1101:1212/130124.761302:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+49175 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:01:26,731 - INFO: Processing Image...
+2025-12-12 13:01:26,732 - INFO: Sending to Display...
+2025-12-12 13:01:49,951 - INFO: Sleeping Display...
+2025-12-12 13:01:52,052 - INFO: Update complete. Sleeping for 230s...
+2025-12-12 13:05:09,948 - INFO: Starting Dashboard Automator...
+2025-12-12 13:05:09,954 - INFO: Fetching Slow Data...
+2025-12-12 13:05:09,960 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:05:11,964 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:05:15,966 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:05:23,967 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:05:30,108 - INFO: Fetching Fast Data...
+2025-12-12 13:05:30,389 - INFO: Rendering HTML...
+2025-12-12 13:05:30,416 - INFO: Generating Image...
+[1142:1220:1212/130534.707954:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1220:1212/130549.576566:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130552.234363:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1220:1212/130552.234593:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1220:1212/130552.234647:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1220:1212/130552.234680:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1220:1212/130552.234747:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1220:1212/130552.234811:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1220:1212/130552.234838:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130552.272769:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1142:1212/130552.425601:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1142:1212/130552.425711:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1142:1212/130552.425937:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1220:1212/130552.426849:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130552.546749:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1231:1231:1212/130553.068595:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1231:1231:1212/130553.068885:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1231:1231:1212/130553.068965:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1231:1231:1212/130553.069059:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1231:1231:1212/130553.069669:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1231:1231:1212/130553.143389:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1231:1231:1212/130553.143650:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1231:1231:1212/130553.143761:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1231:1231:1212/130553.143838:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1231:1231:1212/130553.143915:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1231:1231:1212/130553.150877:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1142:1220:1212/130554.444435:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130554.598511:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1220:1212/130554.598951:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130554.632612:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1220:1212/130554.634193:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130554.638325:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1220:1212/130554.638586:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130554.657705:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1142:1220:1212/130554.657957:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1142:1142:1212/130554.659241:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+56372 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:05:56,150 - INFO: Processing Image...
+2025-12-12 13:05:56,150 - INFO: Sending to Display...
+2025-12-12 13:06:19,356 - INFO: Sleeping Display...
+2025-12-12 13:06:21,458 - INFO: Update complete. Sleeping for 228s...
+2025-12-12 13:08:05,895 - INFO: Starting Dashboard Automator...
+2025-12-12 13:08:05,901 - INFO: Fetching Slow Data...
+2025-12-12 13:08:05,908 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:08:07,910 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:08:11,912 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:08:19,914 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:08:25,955 - INFO: Fetching Fast Data...
+2025-12-12 13:08:26,202 - INFO: Rendering HTML...
+2025-12-12 13:08:26,231 - INFO: Generating Image...
+[1140:1216:1212/130830.799345:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1216:1212/130845.880927:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130848.275650:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1216:1212/130848.276062:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1216:1212/130848.276136:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1216:1212/130848.276213:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1216:1212/130848.277181:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1216:1212/130848.277278:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1216:1212/130848.277307:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130848.317437:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1140:1212/130848.476711:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1140:1212/130848.476831:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1140:1212/130848.477051:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1216:1212/130848.479659:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130848.577228:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1248:1248:1212/130848.848023:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1248:1248:1212/130848.848320:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1248:1248:1212/130848.848439:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1248:1248:1212/130848.848542:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1248:1248:1212/130848.848606:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1248:1248:1212/130848.905079:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1248:1248:1212/130848.905314:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1248:1248:1212/130848.907075:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1248:1248:1212/130848.907199:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1248:1248:1212/130848.907288:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1248:1248:1212/130848.923822:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1140:1216:1212/130850.382624:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130850.531422:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1216:1212/130850.532066:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130850.563497:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1216:1212/130850.563712:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130850.571720:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1216:1212/130850.572426:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130850.592845:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1140:1216:1212/130850.596539:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1140:1140:1212/130850.596915:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+56576 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:08:52,054 - INFO: Processing Image...
+2025-12-12 13:08:52,060 - INFO: Sending to Display...
+2025-12-12 13:09:15,263 - INFO: Sleeping Display...
+2025-12-12 13:09:17,364 - INFO: Update complete. Sleeping for 229s...
+2025-12-12 13:12:10,440 - INFO: Starting Dashboard Automator...
+2025-12-12 13:12:10,445 - INFO: Fetching Slow Data...
+2025-12-12 13:12:10,452 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:12:12,453 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:12:16,455 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:12:24,457 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:12:33,230 - INFO: Fetching Fast Data...
+2025-12-12 13:12:33,573 - INFO: Rendering HTML...
+2025-12-12 13:12:33,592 - INFO: Generating Image...
+[1286:1318:1212/131236.541559:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1318:1212/131250.621877:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131252.550588:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1318:1212/131252.550847:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1318:1212/131252.550892:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1318:1212/131252.550923:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1318:1212/131252.550953:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1318:1212/131252.550986:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1318:1212/131252.551013:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131252.592746:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1286:1212/131252.736689:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1286:1212/131252.736850:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1286:1212/131252.737063:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1318:1212/131252.738345:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131252.864741:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1337:1337:1212/131253.377933:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1337:1337:1212/131253.378227:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1337:1337:1212/131253.378556:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1337:1337:1212/131253.378658:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1337:1337:1212/131253.378888:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1337:1337:1212/131253.435910:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1337:1337:1212/131253.439664:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1337:1337:1212/131253.440795:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1337:1337:1212/131253.441155:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1337:1337:1212/131253.441343:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1337:1337:1212/131253.445172:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1286:1318:1212/131254.687551:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131254.827820:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1318:1212/131254.828048:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131254.852849:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1318:1212/131254.854349:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131254.865104:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1318:1212/131254.865388:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131254.883299:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1286:1318:1212/131254.883640:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1286:1286:1212/131254.884579:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+55407 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:12:56,313 - INFO: Processing Image...
+2025-12-12 13:12:56,313 - INFO: Sending to Display...
+2025-12-12 13:13:19,523 - INFO: Sleeping Display...
+2025-12-12 13:13:21,624 - INFO: Update complete. Sleeping for 229s...
+2025-12-12 13:14:37,607 - INFO: Starting Dashboard Automator...
+2025-12-12 13:14:37,613 - INFO: Fetching Slow Data...
+2025-12-12 13:14:37,628 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:14:39,630 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:14:43,631 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:14:51,633 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:14:59,374 - INFO: Fetching Fast Data...
+2025-12-12 13:14:59,643 - INFO: Rendering HTML...
+2025-12-12 13:14:59,662 - INFO: Generating Image...
+[1292:1333:1212/131502.621245:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1333:1212/131516.634244:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131518.584658:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131518.585559:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1333:1212/131518.585842:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1333:1212/131518.586014:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1333:1212/131518.586138:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1333:1212/131518.586299:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1333:1212/131518.586444:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131518.619759:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1292:1212/131518.773669:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1292:1212/131518.773807:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1292:1212/131518.773978:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131518.774917:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131518.872179:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131520.621045:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131520.764408:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131520.765030:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131520.792275:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131520.792619:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131520.798001:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131520.798324:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131520.814861:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1292:1333:1212/131520.817130:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1292:1292:1212/131520.822359:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+64250 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:15:21,407 - INFO: DEBUG: Rendered image size: (800, 600)
+2025-12-12 13:15:21,430 - INFO: DEBUG: Final image size: (800, 480)
+2025-12-12 13:15:22,246 - INFO: Processing Image...
+2025-12-12 13:15:22,247 - INFO: Sending image to display: (800, 480)
+2025-12-12 13:15:22,247 - INFO: Sending to Display...
+2025-12-12 13:15:45,454 - INFO: Sleeping Display...
+2025-12-12 13:15:47,556 - INFO: Update complete. Sleeping for 230s...
+2025-12-12 13:16:57,814 - INFO: Starting Dashboard Automator...
+2025-12-12 13:16:57,820 - INFO: Fetching Slow Data...
+2025-12-12 13:16:57,830 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:16:59,836 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:17:03,837 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:17:11,839 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:17:19,254 - INFO: Fetching Fast Data...
+2025-12-12 13:17:19,586 - INFO: Rendering HTML...
+2025-12-12 13:17:19,605 - INFO: Generating Image...
+[1276:1311:1212/131722.562299:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1311:1212/131724.134092:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131738.429084:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131738.429378:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1311:1212/131738.429585:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1311:1212/131738.429740:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1311:1212/131738.429901:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1311:1212/131738.430035:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1311:1212/131738.430067:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131738.467388:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1276:1212/131738.612584:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1276:1212/131738.612730:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1276:1212/131738.612937:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131738.614265:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131738.726164:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131740.434280:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131740.579111:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131740.579844:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131740.604716:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131740.605137:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131740.611843:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131740.612140:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131740.634545:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1276:1311:1212/131740.634932:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1276:1276:1212/131740.635916:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+36161 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:17:41,225 - INFO: DEBUG: Rendered image size: (800, 600)
+2025-12-12 13:17:41,248 - INFO: DEBUG: Final image size: (800, 480)
+2025-12-12 13:17:42,060 - INFO: Processing Image...
+2025-12-12 13:17:42,061 - INFO: Sending image to display: (800, 480)
+2025-12-12 13:17:42,061 - INFO: Sending to Display...
+2025-12-12 13:18:05,250 - INFO: Sleeping Display...
+2025-12-12 13:18:07,351 - INFO: Update complete. Sleeping for 230s...
+2025-12-12 13:19:46,677 - INFO: Starting Dashboard Automator...
+2025-12-12 13:19:46,691 - INFO: Fetching Slow Data...
+2025-12-12 13:19:46,701 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:19:48,703 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:19:52,705 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:20:00,706 - WARNING: Retrying (Retry(total=1, connect=1, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:20:08,069 - INFO: Fetching Fast Data...
+2025-12-12 13:20:08,354 - INFO: Rendering HTML...
+2025-12-12 13:20:08,383 - INFO: Generating Image...
+[1360:1401:1212/132011.549811:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1401:1212/132013.106511:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132027.224099:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132027.224878:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1401:1212/132027.225129:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1401:1212/132027.225290:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1401:1212/132027.225410:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1401:1212/132027.225525:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1401:1212/132027.225637:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132027.264119:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1360:1212/132027.420057:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1360:1212/132027.420713:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1360:1212/132027.421251:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132027.421432:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132027.524449:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132029.271565:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132029.414530:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132029.414866:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132029.441006:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132029.441318:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132029.448341:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132029.448658:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132029.471767:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1360:1401:1212/132029.472446:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1360:1360:1212/132029.473566:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+36569 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:20:30,043 - INFO: DEBUG: Rendered image size: (800, 600)
+2025-12-12 13:20:30,066 - INFO: DEBUG: Final image size: (800, 480)
+2025-12-12 13:20:30,880 - INFO: Processing Image...
+2025-12-12 13:20:30,881 - INFO: Sending image to display: (800, 480)
+2025-12-12 13:20:30,881 - INFO: Sending to Display...
+2025-12-12 13:20:54,068 - INFO: Sleeping Display...
+2025-12-12 13:20:56,170 - INFO: Update complete. Sleeping for 231s...
+2025-12-12 13:21:46,129 - INFO: Starting Dashboard Automator...
+2025-12-12 13:21:46,134 - INFO: Fetching Slow Data...
+2025-12-12 13:21:46,140 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:21:48,141 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:21:52,144 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:21:58,791 - INFO: Fetching Fast Data...
+2025-12-12 13:21:59,024 - INFO: Rendering HTML...
+2025-12-12 13:21:59,044 - INFO: Generating Image...
+[1108:1140:1212/132202.118085:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1140:1212/132203.733693:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132205.695297:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1140:1212/132205.695507:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1140:1212/132205.695546:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1140:1212/132205.695574:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1140:1212/132205.695601:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1140:1212/132205.695656:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1140:1212/132205.695683:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132205.725796:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1108:1212/132205.873487:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1108:1212/132205.873604:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1108:1212/132205.873770:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1140:1212/132205.875347:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132205.974869:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1149:1149:1212/132206.466855:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1149:1149:1212/132206.467187:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1149:1149:1212/132206.467265:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1149:1149:1212/132206.467357:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1149:1149:1212/132206.467420:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1149:1149:1212/132206.521972:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1149:1149:1212/132206.522241:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1149:1149:1212/132206.522319:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1149:1149:1212/132206.522385:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1149:1149:1212/132206.522453:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1149:1149:1212/132206.527676:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1108:1140:1212/132207.830373:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132207.970015:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1140:1212/132207.970369:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132207.994134:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1140:1212/132207.996024:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132208.005989:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1140:1212/132208.006266:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132208.023703:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1108:1140:1212/132208.024037:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1108:1108:1212/132208.025048:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+61980 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:22:09,437 - INFO: Processing Image...
+2025-12-12 13:22:09,438 - INFO: Sending to Display...
+2025-12-12 13:22:45,041 - INFO: Sleeping Display...
+2025-12-12 13:22:47,141 - INFO: Update complete. Sleeping for 239s...
+2025-12-12 13:26:46,134 - INFO: Fetching Fast Data...
+2025-12-12 13:26:46,637 - INFO: Rendering HTML...
+2025-12-12 13:26:46,686 - INFO: Generating Image...
+[1491:1522:1212/132647.092484:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1522:1212/132647.169035:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1536:1536:1212/132647.363804:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1536:1536:1212/132647.364277:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1536:1536:1212/132647.364420:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1536:1536:1212/132647.364535:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1536:1536:1212/132647.364656:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1491:1491:1212/132647.421397:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1522:1212/132647.423109:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1522:1212/132647.423216:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1522:1212/132647.423255:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1522:1212/132647.423292:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1522:1212/132647.423330:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1522:1212/132647.423361:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1536:1536:1212/132647.422914:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1536:1536:1212/132647.424969:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1536:1536:1212/132647.425324:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1536:1536:1212/132647.425569:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1536:1536:1212/132647.425852:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1491:1491:1212/132647.433248:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1536:1536:1212/132647.435579:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1491:1491:1212/132647.500377:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1491:1212/132647.500527:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1491:1212/132647.500777:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1522:1212/132647.505602:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1491:1212/132647.595723:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1603:1603:1212/132647.819394:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1603:1603:1212/132647.819780:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1603:1603:1212/132647.820190:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1603:1603:1212/132647.820664:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1603:1603:1212/132647.821020:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1603:1603:1212/132647.877242:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1603:1603:1212/132647.877691:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1603:1603:1212/132647.877780:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1603:1603:1212/132647.877969:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1603:1603:1212/132647.878046:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1603:1603:1212/132647.881726:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1491:1522:1212/132648.196420:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1491:1212/132648.320553:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1522:1212/132648.321918:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1491:1212/132648.341793:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1522:1212/132648.342223:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1491:1212/132648.354578:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1522:1212/132648.355305:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1491:1212/132648.374480:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1491:1522:1212/132648.374898:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1491:1491:1212/132648.376316:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+62382 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:26:49,555 - INFO: Processing Image...
+2025-12-12 13:26:49,556 - INFO: Sending to Display...
+2025-12-12 13:27:12,755 - INFO: Sleeping Display...
+2025-12-12 13:27:14,856 - INFO: Update complete. Sleeping for 271s...
+2025-12-12 13:27:29,820 - INFO: Starting Dashboard Automator...
+2025-12-12 13:27:29,825 - INFO: Fetching Slow Data...
+2025-12-12 13:27:29,831 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:27:31,832 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:27:35,834 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:27:42,447 - INFO: Fetching Fast Data...
+2025-12-12 13:27:42,742 - INFO: Rendering HTML...
+2025-12-12 13:27:42,762 - INFO: Generating Image...
+[916:988:1212/132746.048833:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:988:1212/132747.874190:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132749.812979:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:988:1212/132749.813193:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:988:1212/132749.813234:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:988:1212/132749.813264:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:988:1212/132749.813290:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:988:1212/132749.813342:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:988:1212/132749.813369:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132749.847535:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:916:1212/132749.993651:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:916:1212/132749.993768:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:916:1212/132749.993937:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:988:1212/132749.994489:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132750.103659:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1100:1100:1212/132750.484885:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1100:1100:1212/132750.485217:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1100:1100:1212/132750.485291:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1100:1100:1212/132750.485379:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1100:1100:1212/132750.485461:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1100:1100:1212/132750.538811:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1100:1100:1212/132750.539137:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1100:1100:1212/132750.539397:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1100:1100:1212/132750.539471:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1100:1100:1212/132750.539541:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1100:1100:1212/132750.542554:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[916:988:1212/132751.903398:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132752.045590:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:988:1212/132752.046147:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132752.070735:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:988:1212/132752.071456:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132752.086229:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:988:1212/132752.086484:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132752.104320:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[916:988:1212/132752.104576:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[916:916:1212/132752.105568:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+65011 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:27:53,494 - INFO: Processing Image...
+2025-12-12 13:27:53,494 - INFO: Sending to Display...
+2025-12-12 13:28:29,069 - INFO: Sleeping Display...
+2025-12-12 13:28:31,170 - INFO: Update complete. Sleeping for 239s...
+2025-12-12 13:29:44,544 - INFO: Starting Dashboard Automator...
+2025-12-12 13:29:44,548 - INFO: Fetching Slow Data...
+2025-12-12 13:29:44,554 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:29:46,556 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:29:50,557 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:29:57,247 - INFO: Fetching Fast Data...
+2025-12-12 13:29:57,528 - INFO: Rendering HTML...
+2025-12-12 13:29:57,554 - INFO: Generating Image...
+[1090:1142:1212/133000.724789:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1142:1212/133002.486351:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133004.957346:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1142:1212/133004.957718:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1142:1212/133004.957802:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1142:1212/133004.957838:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1142:1212/133004.957870:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1142:1212/133004.957960:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1142:1212/133004.958027:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133005.001091:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1090:1212/133005.221328:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1090:1212/133005.221448:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1090:1212/133005.221614:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1142:1212/133005.225299:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133005.362385:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1152:1152:1212/133005.769588:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1152:1152:1212/133005.769947:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1152:1152:1212/133005.770288:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1152:1152:1212/133005.770385:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1152:1152:1212/133005.770448:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1152:1152:1212/133005.832136:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1152:1152:1212/133005.834351:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1152:1152:1212/133005.834511:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1152:1152:1212/133005.834599:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1152:1152:1212/133005.834676:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1152:1152:1212/133005.842557:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1090:1142:1212/133007.923174:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133008.133502:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1142:1212/133008.135513:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133008.196578:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1142:1212/133008.197253:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133008.209015:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1142:1212/133008.214175:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133008.259515:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1090:1142:1212/133008.259793:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1090:1090:1212/133008.261005:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+65172 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:30:22,237 - INFO: Processing Image...
+2025-12-12 13:30:22,240 - INFO: Sending to Display...
+2025-12-12 13:30:45,445 - INFO: Sleeping Display...
+2025-12-12 13:30:47,547 - INFO: Update complete. Sleeping for 237s...
+2025-12-12 13:32:02,789 - INFO: Starting Dashboard Automator...
+2025-12-12 13:32:02,794 - INFO: Fetching Slow Data...
+2025-12-12 13:32:02,799 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:32:04,801 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:32:08,805 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:32:15,719 - INFO: Fetching Fast Data...
+2025-12-12 13:32:16,160 - INFO: Rendering HTML...
+2025-12-12 13:32:16,180 - INFO: Generating Image...
+[912:944:1212/133219.197059:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:944:1212/133220.831424:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133222.785842:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:944:1212/133222.786350:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:944:1212/133222.786400:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:944:1212/133222.786436:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:944:1212/133222.786467:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:944:1212/133222.786497:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:944:1212/133222.786526:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133222.826539:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:912:1212/133222.971908:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:912:1212/133222.972034:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:912:1212/133222.972231:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:944:1212/133222.973561:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133223.078898:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[955:955:1212/133223.482642:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[955:955:1212/133223.482961:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[955:955:1212/133223.483038:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[955:955:1212/133223.483127:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[955:955:1212/133223.483192:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[955:955:1212/133223.533364:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[955:955:1212/133223.533604:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[955:955:1212/133223.533715:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[955:955:1212/133223.533784:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[955:955:1212/133223.533852:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[955:955:1212/133223.545109:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[912:944:1212/133224.929778:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133225.071284:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:944:1212/133225.071516:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133225.102466:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:944:1212/133225.102693:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133225.109389:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:944:1212/133225.109675:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133225.125473:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[912:944:1212/133225.125720:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[912:912:1212/133225.127178:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+64884 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:32:26,539 - INFO: Processing Image...
+2025-12-12 13:32:26,540 - INFO: Sending to Display...
+2025-12-12 13:33:02,128 - INFO: Sleeping Display...
+2025-12-12 13:33:04,229 - INFO: Update complete. Sleeping for 239s...
+2025-12-12 13:37:02,794 - INFO: Fetching Fast Data...
+2025-12-12 13:37:03,160 - INFO: Rendering HTML...
+2025-12-12 13:37:03,176 - INFO: Generating Image...
+[1483:1513:1212/133703.567606:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1513:1212/133703.641548:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1528:1528:1212/133703.822942:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1528:1528:1212/133703.823364:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1528:1528:1212/133703.823521:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1528:1528:1212/133703.823674:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1528:1528:1212/133703.823763:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1528:1528:1212/133703.874641:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1528:1528:1212/133703.874918:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1528:1528:1212/133703.875023:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1528:1528:1212/133703.875109:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1528:1528:1212/133703.875199:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1528:1528:1212/133703.877879:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1483:1483:1212/133703.897983:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1513:1212/133703.898248:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1513:1212/133703.898442:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1513:1212/133703.898676:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1513:1212/133703.898875:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1513:1212/133703.899056:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1513:1212/133703.899315:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133703.910522:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1483:1212/133703.998480:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1483:1212/133703.998946:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1483:1212/133703.999242:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1513:1212/133704.003461:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133704.070250:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1597:1597:1212/133704.335879:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1597:1597:1212/133704.336172:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1597:1597:1212/133704.336265:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1597:1597:1212/133704.336390:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1597:1597:1212/133704.336473:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1597:1597:1212/133704.382533:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1597:1597:1212/133704.382795:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1597:1597:1212/133704.382882:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1597:1597:1212/133704.382965:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1597:1597:1212/133704.383047:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1597:1597:1212/133704.386649:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1483:1513:1212/133704.696066:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133704.813183:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1513:1212/133704.813486:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133704.834009:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1513:1212/133704.834337:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133704.839310:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1513:1212/133704.839726:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133704.851208:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1483:1513:1212/133704.851466:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1483:1483:1212/133704.869336:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+65251 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:37:06,051 - INFO: Processing Image...
+2025-12-12 13:37:06,051 - INFO: Sending to Display...
+2025-12-12 13:37:29,223 - INFO: Sleeping Display...
+2025-12-12 13:37:31,325 - INFO: Update complete. Sleeping for 271s...
+2025-12-12 13:41:40,029 - INFO: Starting Dashboard Automator...
+2025-12-12 13:41:40,034 - INFO: Fetching Slow Data...
+2025-12-12 13:41:40,039 - WARNING: Retrying (Retry(total=4, connect=4, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:41:42,041 - WARNING: Retrying (Retry(total=3, connect=3, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:41:46,042 - WARNING: Retrying (Retry(total=2, connect=2, read=5, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)")': /data/3.0/onecall?lat=-33.8688&lon=151.2093&exclude=minutely,daily,alerts&units=metric&appid=0a0b8ba70a446364835a207bfc36d12e
+2025-12-12 13:41:52,860 - INFO: Fetching Fast Data...
+2025-12-12 13:41:53,180 - INFO: Rendering HTML...
+2025-12-12 13:41:53,199 - INFO: Generating Image...
+[1114:1164:1212/134156.643287:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1164:1212/134158.618559:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134200.961100:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1164:1212/134200.962334:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1164:1212/134200.962443:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1164:1212/134200.962484:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1164:1212/134200.962518:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1164:1212/134200.962548:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1164:1212/134200.962576:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134201.018246:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1114:1212/134201.273660:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1114:1212/134201.273883:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1114:1212/134201.274161:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1164:1212/134201.274955:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134201.473474:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1181:1181:1212/134201.969158:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1181:1181:1212/134201.969473:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1181:1181:1212/134201.969615:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1181:1181:1212/134201.969781:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1181:1181:1212/134201.969871:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1181:1181:1212/134202.018215:ERROR:ui/gl/angle_platform_impl.cc:42] Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+ERR: Display.cpp:1093 (initialize): ANGLE Display::initialize error 12289: Could not open the default X display.
+[1181:1181:1212/134202.018481:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Critical) eglInitialize: Could not open the default X display.
+[1181:1181:1212/134202.018993:ERROR:ui/gl/gl_display.cc:639] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[1181:1181:1212/134202.019087:ERROR:ui/gl/gl_display.cc:674] Initialization of all EGL display types failed.
+[1181:1181:1212/134202.019168:ERROR:ui/ozone/common/gl_ozone_egl.cc:26] GLDisplayEGL::Initialize failed.
+[1181:1181:1212/134202.022705:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1114:1164:1212/134203.391618:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134203.609063:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1164:1212/134203.609440:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134203.655466:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1164:1212/134203.655958:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134203.679916:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1164:1212/134203.682603:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134203.721971:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[1114:1164:1212/134203.722236:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[1114:1114:1212/134203.732777:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+64292 bytes written to file /home/pi/epaper-dash/temp_render.png
+2025-12-12 13:42:17,722 - INFO: Processing Image...
+2025-12-12 13:42:17,723 - INFO: Sending to Display...
+2025-12-12 13:42:40,921 - INFO: Sleeping Display...
+2025-12-12 13:42:43,022 - INFO: Update complete. Sleeping for 237s...
