@@ -24,15 +24,13 @@
                 <div class="module-title">Sydney Weather</div>
                 
                 <div class="weather-main">
-                    <div class="temp-big">{{ weather.current.temp }}°</div>
-                    <div class="weather-desc">{{ weather.current.desc }}</div>
+                    <div class="weather-summary">{{ weather.current.temp }}°</div>
+                    <div class="weather-uv">UV: {{ weather.current.uv }}</div>
                 </div>
 
-                <div class="weather-stats">
-                    <div class="stat-box">Wind: {{ weather.current.wind }}</div>
-                    <div class="stat-box">Gust: {{ weather.current.gust }}</div>
-                    <div class="stat-box">Rain: {{ weather.current.rain_prob }}%</div>
-                    <div class="stat-box">UV: {{ weather.current.uv }}</div>
+                <div class="weather-details">
+                    <div>Wind: <strong>{{ weather.current.wind }}</strong> <span style="font-size: 0.8em;">(Gust {{ weather.current.gust }})</span></div>
+                    <div>Rain: <strong>{{ weather.current.rain_prob }}%</strong> Chance</div>
                 </div>
 
                 <!-- 3 Hour Forecast -->
@@ -44,21 +42,17 @@
                         <div class="f-pop">{{ f.pop }}%</div>
                     </div>
                     {% endfor %}
-                    <div class="forecast-item">
-                        <div class="f-time">Tides</div>
-                        <div class="f-temp">--</div>
-                    </div>
                 </div>
             </div>
 
             <!-- Calendar -->
             <div class="module">
                 <div class="module-title">Schedule</div>
-                <ul class="cal-list">
+                <ul class="calendar-list">
                     {% for event in calendar_events %}
-                    <li class="cal-item">
-                        <div class="cal-time">{{ event.date }} @ {{ event.time }}</div>
-                        <span class="cal-sum">{{ event.summary }}</span>
+                    <li class="calendar-item">
+                        <span class="calendar-time">{{ event.date }} | {{ event.time }}</span>
+                        <span class="calendar-summary">{{ event.summary }}</span>
                     </li>
                     {% else %}
                     <li>No upcoming events</li>
@@ -74,12 +68,12 @@
             <!-- Transport -->
              <div class="module">
                 <div class="module-title">Bus Departures</div>
-                <table class="trans-table">
+                <table class="transport-table">
                     {% for bus in transport_data %}
                     <tr>
-                        <td width="20%"><span class="trans-route">{{ bus.route }}</span></td>
+                        <td width="20%"><span class="route-badge">{{ bus.route }}</span></td>
                         <td width="60%">{{ bus.destination }}</td>
-                        <td width="20%" class="trans-time">{{ bus.due }}</td>
+                        <td width="20%" class="time-remaining">{{ bus.due }}</td>
                     </tr>
                     {% else %}
                     <tr><td>No services</td></tr>
@@ -90,12 +84,14 @@
             <!-- News -->
             <div class="module">
                 <div class="module-title">Headlines</div>
-                {% for article in news_items[:5] %}
-                <div class="news-item">
-                    <span class="news-source">{{ article.source_code|upper }}</span>
-                    {{ article.title }}
-                </div>
-                {% endfor %}
+                <ul class="news-list">
+                    {% for article in news_items %}
+                    <li>
+                        <span class="source-tag source-{{ article.source_code }}">{{ article.source }}</span>
+                        {{ article.title }}
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
 
         </div>
