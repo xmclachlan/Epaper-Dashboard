@@ -7,32 +7,35 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
+        <!-- Header (70px) -->
         <div class="header">
             <h1>Dashboard</h1>
             <div class="date">{{ current_date }}</div>
         </div>
 
-        <!-- Left Column -->
+        <!-- Left Column (Weather & Calendar) -->
         <div class="col-left">
             
-            <!-- Weather Section -->
+            <!-- Weather -->
             <div class="module">
                 <div class="module-title">Weather</div>
-                <div class="weather-summary">{{ current_weather.temp }}°C</div>
-                <div class="weather-details">
-                    <span>Wind: <strong>{{ current_weather.wind }}kt</strong> {{ current_weather.wind_dir }} (Gust: {{ current_weather.gust }})</span>
-                    <span>Rain: <strong>{{ current_weather.rain }}%</strong> | UV: <strong>{{ current_weather.uv }}</strong></span>
+                <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                    <div class="weather-summary">{{ current_weather.temp }}°C</div>
+                    <div style="font-size: 18px; font-weight: bold;">UV: {{ current_weather.uv }}</div>
                 </div>
-                <!-- Weather Graph -->
+                
+                <div class="weather-details">
+                    <div>Wind: <strong>{{ current_weather.wind }}kt</strong> {{ current_weather.wind_dir }} <span style="font-size: 0.8em;">(Gust {{ current_weather.gust }})</span></div>
+                    <div>Rain: <strong>{{ current_weather.rain }}%</strong> Chance</div>
+                </div>
+                
+                <!-- Graph -->
                 {% if weather_graph %}
                 <img src="data:image/png;base64,{{ weather_graph }}" class="weather-graph-img">
-                {% else %}
-                <p>Graph unavailable</p>
                 {% endif %}
             </div>
 
-            <!-- Calendar Section -->
+            <!-- Calendar -->
             <div class="module">
                 <div class="module-title">Calendar</div>
                 <ul class="calendar-list">
@@ -42,25 +45,25 @@
                         <span class="calendar-summary">{{ event.summary }}</span>
                     </li>
                     {% else %}
-                    <li>No upcoming events</li>
+                    <li style="font-size: 18px;">No upcoming events</li>
                     {% endfor %}
                 </ul>
             </div>
 
         </div>
 
-        <!-- Right Column -->
+        <!-- Right Column (Transport & News) -->
         <div class="col-right">
             
-            <!-- Transport Section -->
+            <!-- Transport -->
              <div class="module">
                 <div class="module-title">Departures</div>
                 <table class="transport-table">
                     {% for bus in transport_data %}
                     <tr>
-                        <td><span class="route-badge">{{ bus.route }}</span></td>
-                        <td>{{ bus.destination }}</td>
-                        <td class="time-remaining">{{ bus.due }}</td>
+                        <td width="20%"><span class="route-badge">{{ bus.route }}</span></td>
+                        <td width="55%">{{ bus.destination }}</td>
+                        <td width="25%" class="time-remaining">{{ bus.due }}</td>
                     </tr>
                     {% else %}
                     <tr><td>No departures found</td></tr>
@@ -68,7 +71,7 @@
                 </table>
             </div>
 
-            <!-- News Section -->
+            <!-- News -->
             <div class="module">
                 <div class="module-title">Headlines</div>
                 <ul class="news-list">

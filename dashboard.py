@@ -41,15 +41,8 @@ OUTPUT_IMG = "dashboard_output.png"
 
 # --- NETWORK SESSION SETUP ---
 def get_session():
-    """Create a requests session with retries."""
     session = requests.Session()
-    retry = Retry(
-        total=5,
-        read=5,
-        connect=5,
-        backoff_factor=1,
-        status_forcelist=[500, 502, 503, 504],
-    )
+    retry = Retry(total=5, read=5, connect=5, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
     adapter = HTTPAdapter(max_retries=retry)
     session.mount('http://', adapter)
     session.mount('https://', adapter)
@@ -58,7 +51,6 @@ def get_session():
 # --- DATA FETCHERS ---
 
 def get_wind_direction(degrees):
-    """Convert degrees to compass direction."""
     if degrees is None: return ""
     directions = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
                   "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
@@ -66,11 +58,9 @@ def get_wind_direction(degrees):
     return directions[idx]
 
 def get_weather(session):
-    """Fetch weather from OpenWeatherMap"""
     try:
         api_key = getattr(config, 'OWM_API_KEY', '')
         if not api_key or "YOUR_" in api_key:
-            logging.warning("OpenWeatherMap API Key missing.")
             return {'temp': '--', 'wind': '-', 'gust': '-', 'wind_dir': '', 'rain': 0, 'uv': 0, 'hourly': []}
 
         lat = getattr(config, 'LATITUDE', -33.8688)
@@ -85,13 +75,11 @@ def get_weather(session):
         temp = round(current.get('temp', 0))
         uv = round(current.get('uvi', 0))
         
-        # Wind
         wind_ms = current.get('wind_speed', 0)
         wind_kn = round(wind_ms * 1.94384)
         wind_deg = current.get('wind_deg', 0)
         wind_dir = get_wind_direction(wind_deg)
         
-        # Gusts
         gust_ms = current.get('wind_gust')
         if gust_ms is None and hourly:
              gust_ms = hourly[0].get('wind_gust', 0)
@@ -99,7 +87,6 @@ def get_weather(session):
             gust_ms = wind_ms 
         gust_kn = round(gust_ms * 1.94384)
         
-        # Rain chance
         rain_chance = 0
         hourly_data = []
 
@@ -130,7 +117,6 @@ def get_weather(session):
         return {'temp': '--', 'wind': '-', 'gust': '-', 'wind_dir': '', 'rain': 0, 'uv': 0, 'hourly': []}
 
 def generate_weather_graph(hourly_data):
-    """Generates a Matplotlib graph and returns base64 string."""
     if not hourly_data:
         return None
 
@@ -138,29 +124,32 @@ def generate_weather_graph(hourly_data):
     temps = [x['temp'] for x in hourly_data]
     rains = [x['rain'] for x in hourly_data]
 
-    # Create figure - Slightly smaller to fit layout better
-    fig, ax1 = plt.subplots(figsize=(5, 2.2), dpi=100)
+    # Optimized graph size for the new layout
+    fig, ax1 = plt.subplots(figsize=(5, 1.5), dpi=100)
     
-    # Plot Temp (Line)
     color = 'black'
-    ax1.plot(times, temps, color=color, linewidth=2, label='Temp')
-    ax1.tick_params(axis='y', labelcolor=color, labelsize=10)
-    ax1.tick_params(axis='x', labelsize=10)
+    ax1.plot(times, temps, color=color, linewidth=2)
+    ax1.tick_params(axis='y', labelcolor=color, labelsize=9)
+    ax1.tick_params(axis='x', labelsize=9)
     
     date_form = DateFormatter("%H")
     ax1.xaxis.set_major_formatter(date_form)
     
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
+    ax1.spines['left'].set_visible(False) # Cleaner look
+    ax1.spines['bottom'].set_visible(False)
 
     if any(r > 0 for r in rains):
         ax2 = ax1.twinx()
         color = 'blue'
-        ax2.bar(times, rains, color=color, alpha=0.5, width=0.03, label='Rain %')
+        ax2.bar(times, rains, color=color, alpha=0.3, width=0.04)
         ax2.set_ylim(0, 100)
         ax2.spines['top'].set_visible(False)
-        ax2.tick_params(axis='y', labelcolor=color, labelsize=10)
-        ax2.set_yticks([0, 50, 100])
+        ax2.spines['right'].set_visible(False)
+        ax2.spines['left'].set_visible(False)
+        ax2.spines['bottom'].set_visible(False)
+        ax2.set_yticks([]) # Hide rain axis ticks to save space
 
     plt.tight_layout()
     
@@ -171,7 +160,6 @@ def generate_weather_graph(hourly_data):
     return base64.b64encode(buf.getvalue()).decode('utf-8')
 
 def get_transport(session):
-    """Fetch bus departures"""
     api_key = getattr(config, 'TFNSW_API_KEY', '')
     stop_id = getattr(config, 'BUS_STOP_ID', '')
 
@@ -213,7 +201,6 @@ def get_transport(session):
     return departures if departures else [{"route": "--", "destination": "No services", "due": ""}]
 
 def get_news():
-    """Fetch headlines"""
     headlines = []
     sources = [
         ("ABC", "abc", "https://www.abc.net.au/news/feed/51120/rss.xml"),
@@ -230,7 +217,6 @@ def get_news():
     return headlines
 
 def get_calendar(session):
-    """Fetch calendar events"""
     events = []
     cal_url = getattr(config, 'CALENDAR_URL', None) or getattr(config, 'CALENDAR_ICS_URL', None)
     
@@ -257,19 +243,10 @@ def get_calendar(session):
                     else:
                         dtstart = dtstart.replace(tzinfo=local_tz)
                     
-                    if dtend:
-                        if dtend.tzinfo:
-                            dtend = dtend.astimezone(local_tz)
-                        else:
-                            dtend = dtend.replace(tzinfo=local_tz)
-                    
                     time_str = dtstart.strftime("%I:%M%p").lower()
                     if time_str.startswith('0'): time_str = time_str[1:]
                     
                     date_str = dtstart.strftime("%a %d/%m")
-                    if dtend:
-                        end_str = dtend.strftime("%I:%M%p").lower()
-                        if end_str.startswith('0'): end_str = end_str[1:]
                 else:
                     dtstart = datetime.combine(dtstart, datetime.min.time(), tzinfo=local_tz)
                     time_str = "All Day"
@@ -295,7 +272,6 @@ def find_chromium():
     return None
 
 def update_display():
-    """Updates the physical E-Paper display"""
     try:
         from waveshare_epd import epd7in5h
         epd = epd7in5h.EPD()
