@@ -1,183 +1,217 @@
-/* E-Paper Optimized CSS 
-   Resolution: 800 x 480 
-   Colors: Black, White, Red (#FF0000), Yellow (#FFFF00)
-*/
+/* E-Paper 800x480 - Red/Yellow/Black/White */
 
 * {
     box-sizing: border-box;
 }
 
-body, html {
+body {
     width: 800px;
     height: 480px;
     margin: 0;
     padding: 0;
+    background-color: white;
+    color: black;
     font-family: 'Arial', sans-serif;
-    background-color: #FFFFFF;
-    color: #000000;
-    overflow: hidden; /* CRITICAL: No scrolling */
+    overflow: hidden;
+    /* Critical */
 }
 
+/* Main Grid: Header + 2 Columns */
 .container {
     width: 800px;
     height: 480px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns (400px each) */
-    grid-template-rows: 70px 410px; /* Header (70px), Content (410px) - Total 480px */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 410px;
 }
 
-/* --- Header (70px) --- */
+/* Header */
 .header {
     grid-column: 1 / span 2;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid #000;
     padding: 0 20px;
-    background-color: #000; 
-    color: #fff;
     height: 70px;
 }
 
 .header h1 {
     font-size: 32px;
     margin: 0;
-    font-weight: bold;
-    color: #FFFF00; /* Yellow Title */
+    color: #FFFF00;
+    /* Yellow */
+}
+
+.header .datetime {
+    text-align: right;
 }
 
 .header .date {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
-/* --- Content Areas (410px) --- */
-.col-left {
-    padding: 15px 20px;
-    border-right: 3px solid #000;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.header .time {
+    font-size: 28px;
+    color: #FF0000;
+    font-weight: bold;
 }
 
+/* Red Time */
+
+/* Columns */
+.col-left,
 .col-right {
-    padding: 15px 20px;
-    height: 100%;
+    padding: 15px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-/* --- Modules --- */
-.module {
-    margin-bottom: 25px; /* Spacing between modules */
+.col-left {
+    border-right: 3px solid black;
 }
 
+/* Modules */
 .module-title {
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 3px solid #FF0000;
-    color: #FF0000; /* Red Header */
-    margin-bottom: 12px;
+    color: #FF0000;
+    /* Red Header */
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* --- Weather --- */
-.weather-summary {
-    font-size: 42px; /* Huge Temp */
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #000;
+/* Weather Compact */
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
-.weather-details {
-    font-size: 20px; /* Readable Text */
-    line-height: 1.5;
+
+.temp-big {
+    font-size: 56px;
+    font-weight: bold;
+    color: black;
+}
+
+.weather-desc {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF0000;
+    /* Red Condition */
+}
+
+.weather-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    font-size: 16px;
     margin-bottom: 15px;
 }
-.weather-graph-img {
-    width: 100%;
-    height: 120px; /* Fixed height for graph */
-    object-fit: contain;
-    border: 2px solid #000;
-    background-color: #fff;
+
+.stat-box {
+    background-color: #FFFF00;
+    /* Yellow Badge */
+    padding: 4px 8px;
+    border: 1px solid black;
+    font-weight: bold;
 }
 
-/* --- News --- */
-.news-list {
+/* 3hr Forecast Row */
+.forecast-row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+.forecast-item {
+    text-align: center;
+    font-size: 14px;
+}
+
+.f-time {
+    font-weight: bold;
+}
+
+.f-pop {
+    color: blue;
+}
+
+/* Calendar */
+.cal-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.news-list li {
-    margin-bottom: 15px;
-    font-size: 18px;
-    line-height: 1.3;
+
+.cal-item {
+    margin-bottom: 10px;
+    border-left: 4px solid #FF0000;
+    /* Red Line */
+    padding-left: 8px;
 }
-.source-tag {
-    font-weight: bold;
+
+.cal-time {
     font-size: 14px;
-    padding: 2px 8px;
-    color: #000;
-    background-color: #FFFF00; /* Yellow Badge */
-    margin-right: 8px;
-    border-radius: 4px;
-    border: 1px solid #000;
-    vertical-align: middle;
+    font-weight: bold;
+    color: #555;
 }
 
-/* --- Transport --- */
-.transport-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 20px;
-}
-.transport-table td {
-    padding: 8px 0;
-    border-bottom: 1px dotted #888;
-}
-.transport-table tr:last-child td {
-    border-bottom: none;
-}
-.route-badge {
-    background-color: #000;
-    color: #fff;
-    padding: 3px 8px;
-    font-weight: bold;
-    border-radius: 4px;
+.cal-sum {
     font-size: 18px;
-}
-.time-remaining {
-    text-align: right;
     font-weight: bold;
-    color: #FF0000; /* Red for Times */
-}
-
-/* --- Calendar --- */
-.calendar-list {
-    list-style: none;
-    padding: 0;
-}
-.calendar-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
-}
-.calendar-time {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 16px;
-    background-color: #FFFF00; /* Yellow Highlight */
-    color: #000;
-    padding: 1px 6px;
-    margin-bottom: 4px;
-    border: 1px solid #000;
-}
-.calendar-summary {
-    display: block;
-    font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: block;
+}
+
+/* Transport */
+.trans-table {
+    width: 100%;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+.trans-table td {
+    padding: 6px 0;
+    border-bottom: 1px dotted #888;
+}
+
+.trans-route {
+    background-color: black;
+    color: white;
+    padding: 2px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.trans-time {
+    font-weight: bold;
+    color: #FF0000;
+    text-align: right;
+}
+
+/* News */
+.news-item {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.news-source {
+    background-color: #FFFF00;
+    padding: 1px 4px;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid black;
+    margin-right: 5px;
+    vertical-align: middle;
 }

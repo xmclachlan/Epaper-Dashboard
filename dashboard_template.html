@@ -2,71 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>E-Paper Dashboard</title>
+    <title>E-Paper</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header (70px) -->
+        <!-- Header -->
         <div class="header">
-            <h1>Dashboard</h1>
-            <div class="date">{{ current_date }}</div>
+            <h1>DASHBOARD</h1>
+            <div class="datetime">
+                <div class="date">{{ current_date }}</div>
+                <div class="time">{{ current_time }}</div>
+            </div>
         </div>
 
-        <!-- Left Column (Weather & Calendar) -->
+        <!-- Left Column -->
         <div class="col-left">
             
             <!-- Weather -->
             <div class="module">
-                <div class="module-title">Weather</div>
-                <div style="display: flex; align-items: baseline; justify-content: space-between;">
-                    <div class="weather-summary">{{ current_weather.temp }}°C</div>
-                    <div style="font-size: 18px; font-weight: bold;">UV: {{ current_weather.uv }}</div>
-                </div>
+                <div class="module-title">Sydney Weather</div>
                 
-                <div class="weather-details">
-                    <div>Wind: <strong>{{ current_weather.wind }}kt</strong> {{ current_weather.wind_dir }} <span style="font-size: 0.8em;">(Gust {{ current_weather.gust }})</span></div>
-                    <div>Rain: <strong>{{ current_weather.rain }}%</strong> Chance</div>
+                <div class="weather-main">
+                    <div class="temp-big">{{ weather.current.temp }}°</div>
+                    <div class="weather-desc">{{ weather.current.desc }}</div>
                 </div>
-                
-                <!-- Graph -->
-                {% if weather_graph %}
-                <img src="data:image/png;base64,{{ weather_graph }}" class="weather-graph-img">
-                {% endif %}
+
+                <div class="weather-stats">
+                    <div class="stat-box">Wind: {{ weather.current.wind }}</div>
+                    <div class="stat-box">Gust: {{ weather.current.gust }}</div>
+                    <div class="stat-box">Rain: {{ weather.current.rain_prob }}%</div>
+                    <div class="stat-box">UV: {{ weather.current.uv }}</div>
+                </div>
+
+                <!-- 3 Hour Forecast -->
+                <div class="forecast-row">
+                    {% for f in weather.forecast %}
+                    <div class="forecast-item">
+                        <div class="f-time">{{ f.time }}</div>
+                        <div class="f-temp">{{ f.temp }}°</div>
+                        <div class="f-pop">{{ f.pop }}%</div>
+                    </div>
+                    {% endfor %}
+                    <div class="forecast-item">
+                        <div class="f-time">Tides</div>
+                        <div class="f-temp">--</div>
+                    </div>
+                </div>
             </div>
 
             <!-- Calendar -->
             <div class="module">
-                <div class="module-title">Calendar</div>
-                <ul class="calendar-list">
+                <div class="module-title">Schedule</div>
+                <ul class="cal-list">
                     {% for event in calendar_events %}
-                    <li class="calendar-item">
-                        <span class="calendar-time">{{ event.date }} | {{ event.time }}</span>
-                        <span class="calendar-summary">{{ event.summary }}</span>
+                    <li class="cal-item">
+                        <div class="cal-time">{{ event.date }} @ {{ event.time }}</div>
+                        <span class="cal-sum">{{ event.summary }}</span>
                     </li>
                     {% else %}
-                    <li style="font-size: 18px;">No upcoming events</li>
+                    <li>No upcoming events</li>
                     {% endfor %}
                 </ul>
             </div>
 
         </div>
 
-        <!-- Right Column (Transport & News) -->
+        <!-- Right Column -->
         <div class="col-right">
             
             <!-- Transport -->
              <div class="module">
-                <div class="module-title">Departures</div>
-                <table class="transport-table">
+                <div class="module-title">Bus Departures</div>
+                <table class="trans-table">
                     {% for bus in transport_data %}
                     <tr>
-                        <td width="20%"><span class="route-badge">{{ bus.route }}</span></td>
-                        <td width="55%">{{ bus.destination }}</td>
-                        <td width="25%" class="time-remaining">{{ bus.due }}</td>
+                        <td width="20%"><span class="trans-route">{{ bus.route }}</span></td>
+                        <td width="60%">{{ bus.destination }}</td>
+                        <td width="20%" class="trans-time">{{ bus.due }}</td>
                     </tr>
                     {% else %}
-                    <tr><td>No departures found</td></tr>
+                    <tr><td>No services</td></tr>
                     {% endfor %}
                 </table>
             </div>
@@ -74,14 +90,12 @@
             <!-- News -->
             <div class="module">
                 <div class="module-title">Headlines</div>
-                <ul class="news-list">
-                    {% for article in news_items %}
-                    <li>
-                        <span class="source-tag source-{{ article.source_code }}">{{ article.source }}</span>
-                        {{ article.title }}
-                    </li>
-                    {% endfor %}
-                </ul>
+                {% for article in news_items[:5] %}
+                <div class="news-item">
+                    <span class="news-source">{{ article.source_code|upper }}</span>
+                    {{ article.title }}
+                </div>
+                {% endfor %}
             </div>
 
         </div>
