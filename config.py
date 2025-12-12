@@ -16,13 +16,12 @@ OWM_API_KEY = os.getenv("OWM_API_KEY", "")
 # --- TRANSPORT (TfNSW) ---
 # Get API key: https://opendata.transport.nsw.gov.au/
 TFNSW_API_KEY = os.getenv("TFNSW_API_KEY", "")
-BUS_STOP_ID = "200060" # Example: Central Station
+BUS_STOP_ID = "206653" # Example: Central Station
 
 # --- CALENDAR (ICS / iCAL) ---
 # Google: Settings -> Secret Address in iCal format
 # iCloud: Public Calendar -> Webcal URL (replace webcal:// with https://)
-# You can also put this in .env if you want to keep it private
-CALENDAR_URL = os.getenv("CALENDAR_URL", "") 
+CALENDAR_URL = os.getenv("CALENDAR_URL", "")
 
 # --- DISPLAY SETTINGS ---
 # Set to True if you want to rotate the display 180 degrees

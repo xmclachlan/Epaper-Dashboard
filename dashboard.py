@@ -4,6 +4,8 @@ import os
 import time
 import logging
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 import feedparser
 import jinja2
 from html2image import Html2Image
@@ -37,6 +39,22 @@ TEMPLATE_FILE = "dashboard_template.html"
 CSS_FILE = "style.css"
 OUTPUT_IMG = "dashboard_output.png"
 
+# --- NETWORK SESSION SETUP ---
+def get_session():
+    """Create a requests session with retries."""
+    session = requests.Session()
+    retry = Retry(
+        total=5,
+        read=5,
+        connect=5,
+        backoff_factor=1,
+        status_forcelist=[500, 502, 503, 504],
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    return session
+
 # --- DATA FETCHERS ---
 
 def get_wind_direction(degrees):
@@ -47,7 +65,7 @@ def get_wind_direction(degrees):
     idx = round(degrees / 22.5) % 16
     return directions[idx]
 
-def get_weather():
+def get_weather(session):
     """Fetch weather from OpenWeatherMap"""
     try:
         api_key = getattr(config, 'OWM_API_KEY', '')
@@ -58,9 +76,8 @@ def get_weather():
         lat = getattr(config, 'LATITUDE', -33.8688)
         lon = getattr(config, 'LONGITUDE', 151.2093)
 
-        # One Call API 3.0
         url = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=minutely,daily&units=metric&appid={api_key}"
-        res = requests.get(url, timeout=10).json()
+        res = session.get(url, timeout=15).json()
         
         current = res.get('current', {})
         hourly = res.get('hourly', [])
@@ -68,7 +85,7 @@ def get_weather():
         temp = round(current.get('temp', 0))
         uv = round(current.get('uvi', 0))
         
-        # Wind Speed & Direction
+        # Wind
         wind_ms = current.get('wind_speed', 0)
         wind_kn = round(wind_ms * 1.94384)
         wind_deg = current.get('wind_deg', 0)
@@ -76,14 +93,10 @@ def get_weather():
         
         # Gusts
         gust_ms = current.get('wind_gust')
-        # Fallback to hourly if current has no gust data (common in OWM)
         if gust_ms is None and hourly:
              gust_ms = hourly[0].get('wind_gust', 0)
-        
-        # If still None, default to current wind speed
         if gust_ms is None: 
             gust_ms = wind_ms 
-
         gust_kn = round(gust_ms * 1.94384)
         
         # Rain chance
@@ -91,7 +104,6 @@ def get_weather():
         hourly_data = []
 
         if hourly:
-            # Pop is 0-1, multiply by 100 for percentage
             pops = [h.get('pop', 0) for h in hourly[:12]]
             rain_chance = round(max(pops) * 100) if pops else 0
             
@@ -126,8 +138,8 @@ def generate_weather_graph(hourly_data):
     temps = [x['temp'] for x in hourly_data]
     rains = [x['rain'] for x in hourly_data]
 
-    # Create figure
-    fig, ax1 = plt.subplots(figsize=(5, 2.5), dpi=100)
+    # Create figure - Slightly smaller to fit layout better
+    fig, ax1 = plt.subplots(figsize=(5, 2.2), dpi=100)
     
     # Plot Temp (Line)
     color = 'black'
@@ -135,15 +147,12 @@ def generate_weather_graph(hourly_data):
     ax1.tick_params(axis='y', labelcolor=color, labelsize=10)
     ax1.tick_params(axis='x', labelsize=10)
     
-    # Clean up X axis (Hours only)
     date_form = DateFormatter("%H")
     ax1.xaxis.set_major_formatter(date_form)
     
-    # Remove top/right spines
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
 
-    # Plot Rain (Bar) on secondary axis
     if any(r > 0 for r in rains):
         ax2 = ax1.twinx()
         color = 'blue'
@@ -161,7 +170,7 @@ def generate_weather_graph(hourly_data):
     buf.seek(0)
     return base64.b64encode(buf.getvalue()).decode('utf-8')
 
-def get_transport():
+def get_transport(session):
     """Fetch bus departures"""
     api_key = getattr(config, 'TFNSW_API_KEY', '')
     stop_id = getattr(config, 'BUS_STOP_ID', '')
@@ -174,14 +183,13 @@ def get_transport():
     
     departures = []
     try:
-        resp = requests.get(url, headers=headers, timeout=10).json()
+        resp = session.get(url, headers=headers, timeout=15).json()
         events = resp.get('stopEvents', [])
         
         for event in events[:4]:
             time_str = event.get('departureTimeEstimated', event.get('departureTimePlanned'))
             if not time_str: continue
 
-            # Clean Z for parsing
             if time_str.endswith('Z'):
                 time_str = time_str[:-1] + "+00:00"
             
@@ -221,7 +229,7 @@ def get_news():
         
     return headlines
 
-def get_calendar():
+def get_calendar(session):
     """Fetch calendar events"""
     events = []
     cal_url = getattr(config, 'CALENDAR_URL', None) or getattr(config, 'CALENDAR_ICS_URL', None)
@@ -230,7 +238,7 @@ def get_calendar():
         return []
 
     try:
-        resp = requests.get(cal_url, timeout=10)
+        resp = session.get(cal_url, timeout=15)
         cal = Calendar.from_ical(resp.text)
         
         tz_name = getattr(config, 'TIMEZONE', "Australia/Sydney")
@@ -244,7 +252,6 @@ def get_calendar():
                 dtend = component.get('dtend').dt if component.get('dtend') else None
                 
                 if type(dtstart) is datetime:
-                    # Timezone conversions
                     if dtstart.tzinfo:
                         dtstart = dtstart.astimezone(local_tz)
                     else:
@@ -256,30 +263,23 @@ def get_calendar():
                         else:
                             dtend = dtend.replace(tzinfo=local_tz)
                     
-                    # Format time with AM/PM
                     time_str = dtstart.strftime("%I:%M%p").lower()
                     if time_str.startswith('0'): time_str = time_str[1:]
                     
-                    date_str = dtstart.strftime("%A %d/%m")
+                    date_str = dtstart.strftime("%a %d/%m")
                     if dtend:
                         end_str = dtend.strftime("%I:%M%p").lower()
                         if end_str.startswith('0'): end_str = end_str[1:]
-                        # Optional: Add end time if you want
-                        # time_str += f" - {end_str}"
                 else:
-                    # All day
                     dtstart = datetime.combine(dtstart, datetime.min.time(), tzinfo=local_tz)
                     time_str = "All Day"
-                    date_str = dtstart.strftime("%A %d/%m")
+                    date_str = dtstart.strftime("%a %d/%m")
 
-                # Show upcoming 4 events
                 if now < dtstart:
-                    # Shorten summary
-                    if len(summary) > 20:
-                        summary = summary[:18] + ".."
+                    if len(summary) > 22:
+                        summary = summary[:20] + ".."
                     
-                    full_text = f"{date_str} {time_str}: {summary}"
-                    events.append({'full_text': full_text, 'dt': dtstart})
+                    events.append({'date': date_str, 'time': time_str, 'summary': summary, 'dt': dtstart})
         
         events.sort(key=lambda x: x['dt'])
     except Exception as e:
@@ -300,7 +300,6 @@ def update_display():
         from waveshare_epd import epd7in5h
         epd = epd7in5h.EPD()
         epd.init()
-        # epd.Clear() 
         logging.info("Processing Image...")
         Himage = Image.open(OUTPUT_IMG)
         if getattr(config, 'ROTATE_180', False):
@@ -323,6 +322,8 @@ def main():
     cached_news = []
     cached_calendar = []
 
+    session = get_session()
+
     browser_path = find_chromium()
     if not browser_path:
         logging.error("Chromium not found. Install with: sudo apt install chromium")
@@ -333,16 +334,16 @@ def main():
             start_time = time.time()
             if (start_time - last_slow_update) >= SLOW_UPDATE_INTERVAL or cached_weather is None:
                 logging.info("Fetching Slow Data...")
-                cached_weather = get_weather()
+                cached_weather = get_weather(session)
                 cached_weather_graph = generate_weather_graph(cached_weather.get('hourly', []))
                 cached_news = get_news()
-                cached_calendar = get_calendar()
+                cached_calendar = get_calendar(session)
                 last_slow_update = start_time
             else:
                 logging.info("Using cached Slow Data.")
 
             logging.info("Fetching Fast Data...")
-            transport = get_transport()
+            transport = get_transport(session)
             
             logging.info("Rendering HTML...")
             env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(os.path.realpath(__file__))))

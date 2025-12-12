@@ -18,14 +18,11 @@
             
             <!-- Weather Section -->
             <div class="module">
-                <div class="module-title">
-                    <span>Weather</span>
-                    <span>{{ current_weather.temp }}°C</span>
-                </div>
+                <div class="module-title">Weather</div>
+                <div class="weather-summary">{{ current_weather.temp }}°C</div>
                 <div class="weather-details">
-                    <span>Wind: {{ current_weather.wind }}kt {{ current_weather.wind_dir }} (Gust: {{ current_weather.gust }}kt)</span>
-                    <span>Rain: {{ current_weather.rain }}%</span>
-                    <span>UV: {{ current_weather.uv }}</span>
+                    <span>Wind: <strong>{{ current_weather.wind }}kt</strong> {{ current_weather.wind_dir }} (Gust: {{ current_weather.gust }})</span>
+                    <span>Rain: <strong>{{ current_weather.rain }}%</strong> | UV: <strong>{{ current_weather.uv }}</strong></span>
                 </div>
                 <!-- Weather Graph -->
                 {% if weather_graph %}
@@ -41,7 +38,8 @@
                 <ul class="calendar-list">
                     {% for event in calendar_events %}
                     <li class="calendar-item">
-                        {{ event.full_text }}
+                        <span class="calendar-time">{{ event.date }} | {{ event.time }}</span>
+                        <span class="calendar-summary">{{ event.summary }}</span>
                     </li>
                     {% else %}
                     <li>No upcoming events</li>
