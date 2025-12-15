@@ -24,7 +24,13 @@
                 <div class="module-title">Sydney Weather</div>
                 
                 <div class="weather-main">
-                    <div class="temp-big">{{ weather.current.temp }}°</div>
+                    <div style="display: flex; align-items: flex-end;">
+                        <div class="temp-big">{{ weather.current.temp }}°</div>
+                        <div class="temp-hl">
+                            <div>H:{{ weather.current.temp_max }}°</div>
+                            <div>L:{{ weather.current.temp_min }}°</div>
+                        </div>
+                    </div>
                     <div class="weather-desc">{{ weather.current.desc }}</div>
                 </div>
 
@@ -35,7 +41,7 @@
                     <div class="stat-box">UV: {{ weather.current.uv }}</div>
                 </div>
 
-                <!-- 3 Hour Forecast -->
+                <!-- 3 Hour Forecast + Tides -->
                 <div class="forecast-row">
                     {% for f in weather.forecast %}
                     <div class="forecast-item">
@@ -44,9 +50,14 @@
                         <div class="f-pop">{{ f.pop }}%</div>
                     </div>
                     {% endfor %}
+                    <!-- Tide Placeholder -->
                     <div class="forecast-item">
-                        <div class="f-time">Tides</div>
-                        <div class="f-temp">--</div>
+                        <div class="f-time">High</div>
+                        <div class="f-temp">{{ weather.current.tide_high }}</div>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="f-time">Low</div>
+                        <div class="f-temp">{{ weather.current.tide_low }}</div>
                     </div>
                 </div>
             </div>

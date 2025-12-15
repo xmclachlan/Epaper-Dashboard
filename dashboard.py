@@ -13,8 +13,6 @@ from datetime import datetime, timedelta, timezone
 from icalendar import Calendar
 from PIL import Image
 import shutil
-import matplotlib.pyplot as plt
-from matplotlib.dates import DateFormatter
 import base64
 import io
 from zoneinfo import ZoneInfo
@@ -66,11 +64,13 @@ def get_weather(session):
         lat = getattr(config, 'LATITUDE', -33.8688)
         lon = getattr(config, 'LONGITUDE', 151.2093)
 
-        url = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=minutely,daily,alerts&units=metric&appid={api_key}"
+        # Removed 'daily' from exclude list to get high/low
+        url = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=minutely,alerts&units=metric&appid={api_key}"
         res = session.get(url, timeout=15).json()
         
         current = res.get('current', {})
         hourly = res.get('hourly', [])
+        daily = res.get('daily', [])
         
         # Current
         temp = round(current.get('temp', 0))
@@ -78,22 +78,28 @@ def get_weather(session):
         
         wind_ms = current.get('wind_speed', 0)
         wind_kn = round(wind_ms * 1.94384)
-        wind_deg = current.get('wind_deg', 0)
-        wind_dir = get_wind_direction(wind_deg)
+        wind_dir = get_wind_direction(current.get('wind_deg', 0))
         
         gust_ms = current.get('wind_gust', wind_ms)
         gust_kn = round(gust_ms * 1.94384)
 
+        # Today's High/Low
+        temp_max = "-"
+        temp_min = "-"
+        if daily:
+            today = daily[0]
+            temp_max = round(today['temp']['max'])
+            temp_min = round(today['temp']['min'])
+
         weather_data = {
             'temp': temp,
+            'temp_max': temp_max,
+            'temp_min': temp_min,
             'desc': desc,
             'wind': f"{wind_kn}kt {wind_dir}",
             'gust': f"{gust_kn}kt",
             'uv': round(current.get('uvi', 0)),
-            'rain_prob': 0,
-            # Placeholder for Tides (Not in OWM)
-            'tide_high': "14:30",
-            'tide_low': "20:45" 
+            'rain_prob': 0
         }
 
         # 3-Hour Forecast
@@ -108,6 +114,7 @@ def get_weather(session):
                 pop = round(h.get('pop', 0) * 100)
                 t = round(h.get('temp', 0))
                 
+                # Condition Icon Logic (Text based for now or simple icon class)
                 code = h.get('weather', [{}])[0].get('id', 800)
                 icon = "sun"
                 if 200 <= code < 600: icon = "rain"
@@ -122,6 +129,7 @@ def get_weather(session):
                     'icon': icon
                 })
             
+            # Max rain prob for current summary
             weather_data['rain_prob'] = round(max([h.get('pop', 0) for h in hourly[:12]]) * 100)
 
         return {'current': weather_data, 'forecast': forecast_items}
@@ -162,6 +170,7 @@ def get_transport(session):
             
             dep_local = dep_dt.astimezone(local_tz)
             
+            # Format as HH:MM
             due_str = dep_local.strftime("%H:%M")
             
             if dep_local < now_local:
@@ -215,7 +224,6 @@ def get_calendar(session):
             if component.name == "VEVENT":
                 summary = str(component.get('summary'))
                 dtstart = component.get('dtstart').dt
-                dtend = component.get('dtend').dt if component.get('dtend') else None
                 
                 if type(dtstart) is datetime:
                     if dtstart.tzinfo:
@@ -223,21 +231,10 @@ def get_calendar(session):
                     else:
                         dtstart = dtstart.replace(tzinfo=local_tz)
                     
-                    if dtend:
-                        if dtend.tzinfo:
-                            dtend = dtend.astimezone(local_tz)
-                        else:
-                            dtend = dtend.replace(tzinfo=local_tz)
-                    
                     time_str = dtstart.strftime("%I:%M%p").lower()
                     if time_str.startswith('0'): time_str = time_str[1:]
                     
                     date_str = dtstart.strftime("%a %d/%m")
-                    
-                    if dtend:
-                        end_str = dtend.strftime("%I:%M%p").lower()
-                        if end_str.startswith('0'): end_str = end_str[1:]
-                        time_str += f" - {end_str}" # Added End Time
                 else:
                     dtstart = datetime.combine(dtstart, datetime.min.time(), tzinfo=local_tz)
                     time_str = "All Day"
